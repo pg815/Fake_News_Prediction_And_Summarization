@@ -1,0 +1,22 @@
+{
+  "bbc": {
+    "rss": "http://feeds.bbci.co.uk/news/rss.xml",
+    "link": "http://www.bbc.com/"
+  },
+  "cnn": {
+    "rss": "http://rss.cnn.com/rss/edition.rss",
+    "link": "http://edition.cnn.com/"
+  },
+  "foxnews": {
+    "rss": "http://feeds.foxnews.com/foxnews/latest",
+    "link": "http://www.foxnews.com/"
+  },
+  "nytimes_international": {
+    "link": "https://nytimes.com/",
+    "rss": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+  },
+  "washingtonpost": {
+    "rss": "http://feeds.washingtonpost.com/rss/world",
+    "link": "https://www.washingtonpost.com/"
+  }
+}

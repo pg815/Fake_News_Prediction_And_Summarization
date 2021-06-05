@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <title>World Times</title>
+  </head>
+  <body>
+  {% block code_block%}
+<!--    Navbar-->
+      <div class="fixed-top" style="display:block;">
+                <!--Upper-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">Advertise</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">About</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">Events</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">Write for us</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">In the Press</a></li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <ul class="navbar-nav ">
+              <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;"><span class="fa fa-search"></span> Search</a></li>
+              <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">Login</a></li>
+              <li class="nav-item active"><a class="nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">Sign in </a></li>
+            </ul>
+          </form>
+        </div>
+        </nav>
+        <!--Lower-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><b>WORLDTIMES</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#" style="font-family: 'Oswald', sans-serif !important;">HOME<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">MAGAZIES</a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">BUSINESS</a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">SPORTS</a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">ART</a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">POLITICS</a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">TRAVEL</a>
+            <a class="nav-item nav-link" href="#" style="font-family: 'Oswald', sans-serif !important;">CONTACT</a>
+          </div>
+        </div>
+      </nav>
+      </div>
+<!--Flash News-->
+      <div class="container-fluid">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <marquee>
+                  <span class="badge badge-secondary">Flash news</span>
+                  <i>This is basic example of marquee</i>
+                </marquee>
+              </ol>
+            </nav>
+      </div>
+      <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <marquee>
+                  <span class="badge badge-secondary">Flash news</span>
+                  <i>This is basic example of marquee</i>
+                </marquee>
+              </ol>
+            </nav>
+<!--Jumbotron-->
+      <div class="alert alert-light" role="alert">
+        <marquee>
+                  <span class="badge badge-secondary">Flash news</span>
+                  <i>{{titles}}</i>
+                </marquee>
+      </div>
+      <div class="container-fluid" style="width:70%">
+          <div class="jumbotron" style="background-color:black;color:white;">
+                <h2><b>News</b></h2>
+                <hr style="background-color:white;">
+          <div class="list-group">
+
+              {% for channel in channels %}
+                    {% for news in channel %}
+                        <div style="background-color:black;" class="list-group-item list-group-item-action flex-column align-items-start ">
+                            <div class="row">
+                                  <div class="col-md-3">
+                                       <img style="width:250px;height:130px;" src="{{news.img_link}}">
+                                  </div>
+                                  <div class="col-md-9">
+                                          <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1" style="color:white;font-family: 'Oswald', sans-serif !important;">{{news.title}}</h5>
+                                                <small style="color:white">{{news.published}}</small>
+                                          </div>
+                                          <p class="mb-1" style="color:white">{{news.text}}</p>
+                                          <a type="button" style="cursor: pointer;" class="badge badge-info" data-toggle="modal" data-target="#{{news.index}}">Summary</a><span><small style="color:white"> {{news.truthfullness}} {{news.truthfullnessscore}}</small></span>
+                                          <div><a href="{{news.link}}" style="color:white;font-size:15px;">{{news.link}}</a></div>
+                                  </div>
+                            </div>
+                        </div>
+                        <hr style="background-color:white;">
+                        <div class="modal fade" id="{{news.index}}" tabindex="-1" role="dialog" aria-labelledby="{{news.index}}" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color:black;">News Symmary</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                            <h4 style="color:black;">Text Rank</h4>
+                                            <p style="color:black;">{{news.textrank}}</p>
+                                            <h4 style="color:black;">TF-IDF</h4>
+                                            <p style="color:black;">{{news.tf_idf}}</p>
+                                            <h4 style="color:black;">WF</h4>
+                                            <p style="color:black;">{{news.wf}}</p>
+                                      </div>
+                                      <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+              {% endfor %}
+
+          </div>
+
+
+      </div>
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  {% endblock %}
+  </body>
+</html>
