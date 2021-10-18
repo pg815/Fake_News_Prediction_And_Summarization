@@ -16,9 +16,11 @@ $ python app.py
 ![](templates/fnimg1.png)
 
 #### The truthfulness of news
+Highlighted text show the news truthfulness
 ![](templates/fnimg2.png)
 
 #### News summarization
+Click summary button to get news summarization
 ![](templates/fnimg3.png)
 
 
